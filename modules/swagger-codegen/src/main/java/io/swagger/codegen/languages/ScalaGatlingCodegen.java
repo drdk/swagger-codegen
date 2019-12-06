@@ -94,12 +94,6 @@ public class ScalaGatlingCodegen extends AbstractScalaCodegen implements Codegen
          * entire object tree available.  If the input file has a suffix of `.mustache
          * it will be processed by the template engine.  Otherwise, it will be copied
          */
-        supportingFiles.add(new SupportingFile("build.gradle",
-                "",
-                "build.gradle"));
-        supportingFiles.add(new SupportingFile("logback.xml",
-                confFolder,
-                "logback.xml"));
         supportingFiles.add(new SupportingFile("default.conf.mustache",
                 confFolder,
                 "default.conf"));
@@ -108,16 +102,10 @@ public class ScalaGatlingCodegen extends AbstractScalaCodegen implements Codegen
                 "CI.conf"));
         supportingFiles.add(new SupportingFile("default.conf.mustache",
                 confFolder,
-                "CD.conf"));
-        supportingFiles.add(new SupportingFile("default.conf.mustache",
-                confFolder,
                 "stress.conf"));
         supportingFiles.add(new SupportingFile("default.conf.mustache",
                 confFolder,
                 "baseline.conf"));
-        supportingFiles.add(new SupportingFile("default.conf.mustache",
-                confFolder,
-                "longevity.conf"));
 
 
         importMapping.remove("List");
